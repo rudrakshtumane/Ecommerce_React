@@ -5,6 +5,7 @@ import Login from './components/Login';
 import NotFound from "./components/NotFound";
 
 import ProductList from './customHooks/ProductList';
+import Middle from "./components/Middle";
 // import Middle from "./components/Middle";
 // import UserProducts from "./customHooks/UserProducts";
 
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       {/* <Middle/> */}
       <Routes>
+        <Route path='/' element={<Middle/>} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/ProductList' element={<ProductList />} />

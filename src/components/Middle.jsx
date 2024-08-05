@@ -1,19 +1,12 @@
-
+import bg from '../assets/bg.png';
+import bg2 from '../assets/bg-2.png';
 const Middle = () => {
   return (
     <>
-    <div className="hero bg-white min-h-screen">
-  <div className="hero-content text-center">
-    <div className="max-w-md">
-      <h1 className="text-5xl font-bold">Hello there</h1>
-      <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+      <div className=" min-h-screen">
+        <img src={bg} alt="Background" className="w-full h-screen " />
+        <img src={bg2} alt="Background" className="w-full h-screen " />
+      </div>
     </>
   )
 }
