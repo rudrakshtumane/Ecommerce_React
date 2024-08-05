@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound";
 
 import ProductList from './customHooks/ProductList';
 import Middle from "./components/Middle";
+import Footer from "./components/Footer";
 // import Middle from "./components/Middle";
 // import UserProducts from "./customHooks/UserProducts";
 
@@ -21,7 +22,7 @@ const App = () => {
         <Route path='/ProductList' element={<ProductList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-     
+     <Footer/>
     </>
   );
 } 
