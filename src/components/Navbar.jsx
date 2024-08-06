@@ -25,18 +25,34 @@ const Navbar = () => {
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 w-52 p-2 shadow bg-white rounded-box z-[1]">
-                <li><a href="#">Item 1</a></li>
-                <li tabIndex={0}>
-                  <a className="justify-between">
-                    Parent
-                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
-                  </a>
-                  <ul className="p-2">
-                    <li><a href="#">Submenu 1</a></li>
-                    <li><a href="#">Submenu 2</a></li>
-                  </ul>
+                  <div className="dropdown dropdown-hover dropdown-end">
+              <div tabIndex={0} role="button" className="btn btn-ghost m-1 text-black">Sign in</div>
+              <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-[1] w-52 p-2 shadow">
+                <li>
+                  <Link to="/login"
+                    className="btn btn-active text-white"
+                    onClick={() => document.getElementById('login_modal').showModal()}
+                  >
+                    Sign in
+                  </Link>
                 </li>
-                <li><a href="#">Item 3</a></li>
+                <li>
+                  <Link to="/Register"
+                    className="btn btn-link text-sm text-black"
+                    onClick={() => document.getElementById('registration_modal').showModal()}
+                  >
+                    Not a member yet? Join here!
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className='btn btn-ghost text-black'>Favorites</div>
+            <div className="dropdown dropdown-hover dropdown-end">
+              <div tabIndex={0} role="button" className="btn btn-ghost m-1 text-black">Shopping Bag</div>
+              <div tabIndex={0} className="dropdown-content bg-white rounded-box z-[1] w-[300px] p-2 shadow text-sm">
+                <p>Your shopping bag is empty</p>
+              </div>
+            </div>
               </ul>
             </div>
             <div className="hidden lg:flex">
